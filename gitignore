@@ -25,6 +25,15 @@ bower_components/
 *.swp
 *.swo
 
+# Ignore specific files
+New_Project/src/components/Button.jsx
+New_Project/src/components/NoProjectSelected.jsx
+
+# Or ignore the entire components folder
+New_Project/src/components/
+
+
+
 
 
 
