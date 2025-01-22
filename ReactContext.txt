@@ -1,0 +1,43 @@
+Context API
+
+you can use this if you are using below 19 react
+
+<CartContext.Provider>
+
+        <Header
+          cart={shoppingCart}
+          onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
+        />
+        <Shop>
+        {DUMMY_PRODUCTS.map((product) => (
+          <li key={product.id}>
+            
+            <Product {...product} onAddToCart={handleAddItemToCart} />
+          </li>
+        ))}
+        </Shop>
+</CartContext.Provider>
+
+const cartCtx = useContext(CartContext)
+
+------------------------------------
+else just use
+
+<CartContext>
+
+        <Header
+          cart={shoppingCart}
+          onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
+        />
+        <Shop>
+        {DUMMY_PRODUCTS.map((product) => (
+          <li key={product.id}>
+            
+            <Product {...product} onAddToCart={handleAddItemToCart} />
+          </li>
+        ))}
+        </Shop>
+ </CartContext>
+ 
+ 
+ const cartCtx = use(CartContext)
