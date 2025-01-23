@@ -4,12 +4,10 @@ import Cart from './Cart';
 
 
 const CartModal = forwardRef(function Modal(
-  {  title, actions },
+  { title, actions },
   ref
 ) {
   const dialog = useRef();
-
-  
 
   useImperativeHandle(ref, () => {
     return {
@@ -22,7 +20,7 @@ const CartModal = forwardRef(function Modal(
   return createPortal(
     <dialog id="modal" ref={dialog}>
       <h2>{title}</h2>
-      <Cart  />
+      <Cart />
       <form method="dialog" id="modal-actions">
         {actions}
       </form>
